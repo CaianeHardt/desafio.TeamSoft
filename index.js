@@ -1,8 +1,12 @@
-import express from 'express';
+require('dotenv').config()
+const express = require('express')
+const routes = require('./routes')
 
-const app = express();
+const app = express()
+const port = 3006
 
-app.listen(3006, () => 
-console.log('Servidor iniciado na porta 3006')
-); 
+routes(app)
 
+app.listen(port, () => console.log('servidor rodando na porta '+port))
+
+module.exports = app
