@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class enderecos extends Model {
+  class Enderecos extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Enderecos.init({
-    id: DataTypes.BIGINT,
     logradouro: DataTypes.STRING,
     numero: DataTypes.STRING,
     complemento: DataTypes.STRING,

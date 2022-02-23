@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Clientes.init({
-    id: DataTypes.BIGINT,
     cnpj: DataTypes.STRING,
     razaoSocial: DataTypes.STRING,
     nomeDoContato: DataTypes.STRING,
