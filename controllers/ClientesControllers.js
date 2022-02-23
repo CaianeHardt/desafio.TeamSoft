@@ -14,7 +14,7 @@ class ClientesController {
   static async getAClientes(req, res) {
     const { cnpj } = req.params
     try {
-      const aCliente = await database.Clientes.findOne( { 
+      const aClientes = await database.Clientes.findOne( { 
         where: { 
           cnpj: String(cnpj) 
         }
@@ -27,27 +27,24 @@ class ClientesController {
 
   static async createUClientes(req, res) {
     const newClientes = req.body
-    try {
-      newClientes.cnpj = (await ClientesController.addcnpj(newClientes.cnpj)).toString()
-      
-      const newClientesCreated = await database.Clientes.create(newClientes)
-      newClientesCreated.password = null;
-      return res.status(200).json(newClientesCreated)
-    } catch (error) {
-      return res.status(500).json(error.message)
-    }
+      try {
+        const newClientesCreated = await database.Clientes.create(newClientes)
+        return res.status(200).json(newClientesCreated)
+      } catch (error) {
+        return res.status(500).json(error.message)
+      }
   }
 
   static async updateClientes(req, res) {
     const { id } = req.params
-    const newInfo = req.body
-    try {
-      await database.Clientes.update(newInfo, { where: { id: Number(id) }})
-      const updatedClientes = await database.Clientes.findOne( { where: { id: Number(id) }})
-      return res.status(200).json(updatedClientes)
-    } catch (error) {
-      return res.status(500).json(error.message)
-    }
+      const newInfo = req.body
+      try {
+        await database.Clientes.update(newInfo, { where: { id: Number(id) }})
+        const updatedClientes = await database.Clientes.findOne( { where: { id: Number(id) }})
+        return res.status(200).json(updatedClientes)
+      } catch (error) {
+        return res.status(500).json(error.message)
+      }
   }
 
   static async deleteClientes(req, res) {
