@@ -3,13 +3,9 @@ const database = require('../models');
 class AddressController {
 
     static async createAddress(req, res) {
-      console.log("create add")
 
       const { userId } = req.params
-      console.log("params "+userId)
-      
       const newAddress = req.body
-      console.log("body "+newAddress)
       
       try {
         const customer = await database.Customers.findOne( { 
