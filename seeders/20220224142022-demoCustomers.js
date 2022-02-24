@@ -9,11 +9,9 @@ module.exports = {
 
     { 
       cnpj: '27339766000151',
-      razaoSocial: 'TEAMSOFT TECNOLOGIA E SISTEMAS LTDA',
-      nomeDoContato: 'Carvalho',
-      telefone: '(21) 8903-3185',
-      type: 'customer',
-      occupation: 'Dev',
+      corporateName: 'TEAMSOFT TECNOLOGIA E SISTEMAS LTDA',
+      contactName: 'Carvalho',
+      contact: '(21) 8903-3185',
       createdAt: new Date(),
       updatedAt: new Date(),
     }
