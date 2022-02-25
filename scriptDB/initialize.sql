@@ -1,6 +1,6 @@
 create DATABASE teamsoft;
 
-CREATE TABLE Customers (
+CREATE TABLE teamsoft.Customers (
   id int NOT NULL AUTO_INCREMENT,
   cnpj varchar(14) NOT NULL,
   corporateName varchar(100) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Customers (
   UNIQUE KEY Customers_UN (cnpj)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-CREATE TABLE `Address` (
+CREATE TABLE teamsoft.`Address` (
   id int NOT NULL AUTO_INCREMENT,
   user_id int NOT NULL,
   street varchar(50) DEFAULT NULL,

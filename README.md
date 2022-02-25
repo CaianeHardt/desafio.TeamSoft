@@ -35,7 +35,7 @@ POST {baseUrl}/customers (Cria um usuário a partir do JSON enviado via body)
         "cnpj": "51905041000168",
         "corporateName": "TEAMSOFT TECNOLOGIA E SISTEMAS LTDA",
         "contactName": "Carvalho",
-        "contact": "5541685992"
+        "contact": "552189033185"
     }
 PUT /customer/:id (Atualiza os dados do cliente com ID enviado no path e os dados enviados no body)
 DELETE /customer/:id (Remove o cliente, e seus respectivos endereços, dono do ID enviado no path)
